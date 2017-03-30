@@ -1,0 +1,29 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: snuk-build
+    tag: 'latest'
+
+inputs:
+- name: chip_debian_src
+  path: CHIP-debian
+- name: chip_build_src
+  path: CHIP-build
+- name: chip_postchroot_src
+  path: CHIP-postchroot
+- name: chip_server_src
+  path: CHIP-server
+- name: chip_tools_src
+  path: CHIP-tools
+- name: chip_tools_src
+  path: CHIP-tools
+- nmae: postchroot_rootfs_tar_gz
+  path: postchroot-rootfs.tar.gz
+- nmae: iaas_chip_dependencies_tar_gz
+  path: iaas-chip-dependencies.tar.gz
+
+run:
+  path: CHIP-build/build_debian.sh

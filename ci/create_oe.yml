@@ -1,0 +1,16 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: snuk-build
+    tag: 'latest'
+
+inputs:
+- name: yocto-src
+- name: meta-chip-src
+- name: chip-build-src
+
+run:
+  path: chip-build-src/build_oe.sh
