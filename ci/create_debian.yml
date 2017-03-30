@@ -4,8 +4,9 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: snuk-build
+    repository: ci_dockreg:5000/snuk-build
     tag: 'latest'
+    insecure_registries: [ "ci_dockreg:5000" ] 
 
 inputs:
 - name: chip_debian_src
@@ -18,10 +19,10 @@ inputs:
   path: CHIP-server
 - name: chip_tools_src
   path: CHIP-tools
-- name: postchroot_rootfs_tar_gz
-  path: postchroot-rootfs.tar.gz
-- name: iaas_chip_dependencies_tar_gz
-  path: iaas-chip-dependencies.tar.gz
+  #- name: postchroot_rootfs_tar_gz
+  #  path: postchroot-rootfs.tar.gz
+  #- name: iaas_chip_dependencies_tar_gz
+  #  path: iaas-chip-dependencies.tar.gz
 
 run:
   path: CHIP-build/build_debian.sh
