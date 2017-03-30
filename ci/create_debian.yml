@@ -18,8 +18,6 @@ inputs:
   path: CHIP-server
 - name: chip_tools_src
   path: CHIP-tools
-- name: chip_tools_src
-  path: CHIP-tools
 - name: postchroot_rootfs_tar_gz
   path: postchroot-rootfs.tar.gz
 - name: iaas_chip_dependencies_tar_gz
