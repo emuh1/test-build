@@ -20,9 +20,9 @@ inputs:
   path: CHIP-tools
 - name: chip_tools_src
   path: CHIP-tools
-- nmae: postchroot_rootfs_tar_gz
+- name: postchroot_rootfs_tar_gz
   path: postchroot-rootfs.tar.gz
-- nmae: iaas_chip_dependencies_tar_gz
+- name: iaas_chip_dependencies_tar_gz
   path: iaas-chip-dependencies.tar.gz
 
 run:
